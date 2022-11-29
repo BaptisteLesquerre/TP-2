@@ -3,21 +3,21 @@
 #include <iostream>
 #include <string>
 
-Chambre::Chambre(int numero, std::string type, int price){
+hotel::Chambre::Chambre(int numero, std::string type, int price){
     _numero = numero;
     _type = type;
     _price = price;
 }
 
-int Chambre::GetNumero(){
+int hotel::Chambre::GetNumero(){
     return _numero;
 }
 
-std::string GetType(){
+std::string hotel::Chambre::GetType(){
     return _type;
 }
 
-int GetPrice(){
+int hotel::Chambre::GetPrice(){
     return _price;
 }
 
