@@ -3,11 +3,11 @@
 #include <assert.h>
 
 date::Date::Date(int day, int month, int year):_day(day),_month(month),_year(year){
-    bool status = isDate(month, day, year);
+    bool status = isDate(day, month, year);
     assert(status && "Date is not valid");
 }
 
-bool date::Date::isDate(int month,int day,int year) {
+bool date::Date::isDate(int day,int month,int year) {
     if ((day < 1 ) || (day> 31)) return false;
     if ((month <1) || (month>12)) return false;
     if (((month == 4) || (month == 6) || (month == 9) || (month == 11)) && (day > 30)) return false;
