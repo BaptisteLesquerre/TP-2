@@ -12,6 +12,7 @@ bool date::Date::isDate(int day,int month,int year) {
     if ((month <1) || (month>12)) return false;
     if (((month == 4) || (month == 6) || (month == 9) || (month == 11)) && (day > 30)) return false;
     if (year<0) return false;
+    return true;
 }
 
 void date::Date::updateday(int day){
@@ -21,7 +22,7 @@ void date::Date::updateday(int day){
 }
 
 void date::Date::updatemonth(int month){
-    bool status = isDate(_day,month,year);
+    bool status = isDate(_day,month,_year);
     assert(status && "Date is not valid");
     _month = month;
 }
