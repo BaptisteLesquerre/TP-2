@@ -26,3 +26,8 @@ std::string hotel::Chambre::tostring() const {
    "type : " + _type + "\n"
    "price : " + std::to_string(_price) + "\n";
 }
+
+std::ostream& hotel::operator<<(std::ostream& os,const hotel::Chambre& chambre) {
+    os << chambre.tostring() <<std::endl;
+    return os;
+}
