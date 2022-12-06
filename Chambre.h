@@ -15,5 +15,8 @@ namespace hotel{
         std::string GetType();
         int GetPrice();
         std::string tostring() const;
+        
     };
+    
+    std::ostream& operator<<(std::ostream& os,const hotel::Chambre& chambre);
 }
