@@ -2,7 +2,7 @@
 #include "hotel.h"
 #include <vector>
 
-hotel::Hotel::Hotel(std::string idhotel, std::string nom, std::string ville, std::vector<hotel::Chambre> tabchambres):_idhotel(idhotel),_nom(nom),_ville(ville),tabchambres(tabchambres){
+hotel::Hotel::Hotel(std::string idhotel, std::string nom, std::string ville, std::vector<hotel::Chambre> tabchambre):_idhotel(idhotel),_nom(nom),_ville(ville),_tabchambre(tabchambre){
 }
 
 std::string hotel::Hotel::idhotel() const {
@@ -13,8 +13,8 @@ std::string hotel::Hotel::nom() const {
     return _nom;
 }
 
-std::vector<hotel::Chambre> hotel::Hotel::tabchambres() const {
-    return _tabchambres;
+std::vector<hotel::Chambre> hotel::Hotel::tabchambre() const {
+    return _tabchambre;
 }
 
 std::string hotel::Hotel::ville() const {
@@ -32,3 +32,4 @@ void hotel::Hotel::update_nom(std::string nom){
 void hotel::Hotel::update_ville(std::string ville){
     _ville = ville;
 }
+
