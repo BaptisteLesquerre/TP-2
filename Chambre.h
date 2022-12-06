@@ -14,5 +14,11 @@ namespace hotel{
         int GetNumero();
         std::string GetType();
         int GetPrice();
+
+        void SetNumber(int numero);
+        void SetType(std::string type);
+        void SetPrice(int price);
+
+        //pjazekjoaze
     };
 }
