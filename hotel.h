@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "chambre.h"
 
 namespace hotel{
         class Hotel {
@@ -7,9 +8,9 @@ namespace hotel{
                 std::string _idhotel;
                 std::string _nom;
                 std::string _ville;
-                std::vector<hotel::Chambre> _tabchambres;
+                std::vector<hotel::Chambre> _tabchambre;
             public:
-                Hotel(std::string idhotel, std::string nom, std::string ville, std::vector<hotel::Chambre> tabchambres);
+                Hotel(std::string idhotel, std::string nom, std::string ville, std::vector<hotel::Chambre> tabchambre);
                 std::string idhotel() const;
                 std::string nom() const;
                 std::string ville() const;
@@ -18,4 +19,4 @@ namespace hotel{
                 void update_nom(std::string nom);
                 void update_ville(std::string ville);
         };
-}
+}   
