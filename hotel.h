@@ -17,5 +17,5 @@ namespace hotel{
                 void update_idhotel(std::string idhotel);
                 void update_nom(std::string nom);
                 void update_ville(std::string ville);
-        }
+        };
 }
