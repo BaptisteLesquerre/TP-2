@@ -1,4 +1,4 @@
-#include "Chambre.h"
+#include "chambre.h"
 
 #include <iostream>
 #include <string>
@@ -19,5 +19,10 @@ std::string hotel::Chambre::GetType(){
 
 int hotel::Chambre::GetPrice(){
     return _price;
-}
+}    
 
+std::string hotel::Chambre::tostring() const {
+   return "numero : " + std::to_string(_numero) + "\n"
+   "type : " + _type + "\n"
+   "price : " + std::to_string(_price) + "\n";
+}
