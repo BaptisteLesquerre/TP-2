@@ -19,6 +19,5 @@ namespace hotel{
         void SetType(std::string type);
         void SetPrice(int price);
 
-        //pjazekjoaze
     };
 }
