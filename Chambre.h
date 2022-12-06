@@ -14,5 +14,6 @@ namespace hotel{
         int GetNumero();
         std::string GetType();
         int GetPrice();
+        std::string tostring() const;
     };
 }
