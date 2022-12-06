@@ -33,3 +33,9 @@ void hotel::Hotel::update_ville(std::string ville){
     _ville = ville;
 }
 
+std::string hotel::Hotel::tostring() const {
+   return "idhotel : " + _idhotel + "\n"
+   "nom : " + _nom + "\n"
+   "ville : " + _ville + "\n"
+   "tabchambre";
+}
