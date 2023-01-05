@@ -1,24 +1,33 @@
 #include <iostream>
-#include "date.h"
+//#include "date.h"
 #include "hotel.h" 
+#include "client.h"
+#include "reservation.h"
+#include <algorithm>
 
 int main(int argc, char const *argv[]) {
-	date::Date d1(29,11,2022);
-	std::cout << d1.day() <<std::endl;
-	std::cout << d1.month() <<std::endl;
-	std::cout << d1.year() <<std::endl;
+	//création d'un hotel
+	hotel::Hotel h1("45","bg","paris");
+	h1.cch(5,"double",125,0);
+	h1.cch(2,"suite",210,5);
+	h1.cch(3,"single",100,7);
+    
 	
-	hotel::Chambre ch1(1,"king",666);
-	std::vector<hotel::Chambre> c1 ={ch1};
-	
-	hotel::Hotel h1("45","g","paris",c1);
-	std::cout << h1.nom() <<std::endl;
-	h1.update_nom("hghg");
-	std::cout << h1.nom() <<std::endl;
+	//création d'un tableau de clients
+	std::vector<Client> cl;
+    cl.push_back(Client ("1","semoule","bernard"));
+	cl.push_back(Client ("2","potiron","jacque"));
+	cl.push_back(Client ("3","couscous","eric"));
+	cl.push_back(Client ("4","casoulet","patrique"));
 
-	std::cout << c1.size() <<std::endl;
-	hotel::Chambre ch2(5,"king",77);
-	c1.push_back(ch2);
-	std::cout << c1.size() <<std::endl;
-	
+
+    std::vector<Reservation> r;
+
+    //7.1
+    std::string ids =saisi_client(cl);
+
+	//7.2
+	Date datedef;
+	Reservation reservation(datedef,0,"",0,"",0);
+
 }
