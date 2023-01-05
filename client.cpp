@@ -29,7 +29,7 @@ void Client::update_prenom(std::string prenom){
 }
 
 std::string Client::tostring() const {
-    return "idclient : " + _idclient + " " + "nom : " + _nom + " " +"prenom : " + _prenom;
+    return "idclient : " + _idclient + " | " + "nom : " + _nom + " | " +"prenom : " + _prenom;
 }
 
 std::string Client::display(std::vector<Client> c1){
