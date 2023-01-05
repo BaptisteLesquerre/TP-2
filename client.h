@@ -17,3 +17,4 @@
         std::string display(std::vector<Client> c1);
     };
     std::ostream& operator<<(std::ostream& os,const Client& client);
+    std::string saisi_client(std::vector<Client>& cl);
