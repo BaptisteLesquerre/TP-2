@@ -1,3 +1,5 @@
+#ifndef HOTEL_H
+#define HOTEL_H
 #include <iostream>
 #include <vector>
 #include "chambre.h"
@@ -10,7 +12,7 @@ namespace hotel{
                 std::string _ville;
                 std::vector<hotel::Chambre> _tabchambre;
             public:
-                Hotel(std::string idhotel, std::string nom, std::string ville, std::vector<hotel::Chambre> tabchambre);
+                Hotel(std::string idhotel, std::string nom, std::string ville);
                 std::string idhotel() const;
                 std::string nom() const;
                 std::string ville() const;
@@ -19,6 +21,9 @@ namespace hotel{
                 void update_nom(std::string nom);
                 void update_ville(std::string ville);
                 std::string tostring() const;
+                void cch(int nb,std::string b,int prix,int et);
         };
-        std::ostream& operator<<(std::ostream& os,const hotel::Hotel& hotel);
+        std::ostream& operator<<(std::ostream& os,const Hotel& hotel);
+       
 }   
+#endif \\HOTEL_H
