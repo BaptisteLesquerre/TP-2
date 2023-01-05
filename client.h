@@ -1,5 +1,5 @@
 #include <iostream>
-namespace client{
+#include <vector>
     class Client {
         private:
         std::string _idclient;
@@ -13,5 +13,7 @@ namespace client{
         void update_idclient(std::string idclient);
         void update_nom(std::string nom);
         void update_prenom(std::string prenom);
+        std::string tostring() const;
+        std::string display(std::vector<Client> c1);
     };
-}
+    std::ostream& operator<<(std::ostream& os,const Client& client);
