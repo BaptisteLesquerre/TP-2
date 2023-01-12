@@ -11,6 +11,8 @@ namespace hotel{
                 std::string _nom;
                 std::string _ville;
                 std::vector<hotel::Chambre> _tabchambre;
+                 
+
             public:
                 Hotel(std::string idhotel, std::string nom, std::string ville);
                 std::string idhotel() const;
