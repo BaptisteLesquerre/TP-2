@@ -1,3 +1,5 @@
+#ifndef CLIENT_H
+#define CLIENT_H
 #include <iostream>
 #include <vector>
     class Client {
@@ -18,3 +20,4 @@
     };
     std::ostream& operator<<(std::ostream& os,const Client& client);
     std::string saisi_client(std::vector<Client>& cl);
+#endif \\CLIENT_H
