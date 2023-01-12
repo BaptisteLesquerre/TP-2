@@ -44,7 +44,7 @@ std::ostream& operator<<(std::ostream& os,const Client& client){
         os << client.tostring() <<std::endl;
         return os;
     }
-
+    
 std::string saisi_client(std::vector<Client>& cl){
     std::string nom_client;
     bool exist = false;
