@@ -276,23 +276,23 @@ void reservation_creator(hotel::Hotel h1,std::vector<Client> tab_client){
         Reservation rm("0",d,300, h1.idhotel(), 0, "0", 0);
         std::vector<Reservation> rtab;
         rtab.push_back(rm);
-		std::string encore_reserve = "yes";
-		Date datedef;
+	std::string encore_reserve = "yes";
+	Date datedef;
         int nb=0;
-		while(encore_reserve == "yes"){
+	while(encore_reserve == "yes"){
             nb=nb+1;
-			std::string ids =saisi_client(tab_client);
-			Reservation r(std::to_string(nb),datedef,0,h1.idhotel(),0,ids,0);
-			saisi_reservation2(rtab, r, h1, ids);
-			display(rtab);
+	    std::string ids =saisi_client(tab_client);
+	    Reservation r(std::to_string(nb),datedef,0,h1.idhotel(),0,ids,0);
+	    saisi_reservation2(rtab, r, h1, ids);
+	    display(rtab);
 
             modif_reservation(rtab,h1);
             delete_reservation(rtab);
             
             std::cout<<"Procéder à une nouvelle réservation?"<<std::endl;
 			std::cin>> encore_reserve;
-		}
 	}
+}
 
 std::string modif_reservation(std::vector<Reservation>& rtab,hotel::Hotel h1){
     //permet de modifier une réservation en conservant l'identifiant de l'hotel et
