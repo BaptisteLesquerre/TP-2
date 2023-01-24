@@ -22,23 +22,24 @@ int main(int argc, char const *argv[]) {
 	
 	//création d'un tableau de clients
 	std::vector<Client> tab_client;
-    //cl.push_back(Client ("1","semoule","bernard"));
+        //cl.push_back(Client ("1","semoule","bernard"));
 	//cl.push_back(Client ("2","potiron","jacque"));
 	//cl.push_back(Client ("3","couscous","eric"));
 	//cl.push_back(Client ("4","casoulet","patrique"));
-    
+        
+	//création d'un tableau de réservation et de ces réservations
+	
 	//Date d1(1,1,2023);
-    //Reservation r1(d1,5,h1.idhotel(),0,"1",625);
+        //Reservation r1(d1,5,h1.idhotel(),0,"1",625);
 	//Date d2(5,5,2023);
-    //Reservation r2(d2,5,h1.idhotel(),5,"2",625);
+        //Reservation r2(d2,5,h1.idhotel(),5,"2",625);
     
 	//reservationtab.push_back(r1);
 	//reservationtab.push_back(r2);
-
-    //7.1
-    
-
-	//7.2
-	reservation_creator(h1,tab_client);
+        std::vector<Reservation> rtab;
+        Date d(1,1,2023); 
+        Reservation rm("0",d,300, h1.idhotel(), 0, "0", 0);
+        rtab.push_back(rm);
+	reservation_creator(h1,tab_client, rtab);
 	
 }
