@@ -269,12 +269,11 @@ void saisi_reservation2(std::vector<Reservation>& rtab,Reservation& r ,hotel::Ho
     rtab.push_back(r);
 }
 
-void reservation_creator(hotel::Hotel h1,std::vector<Client> tab_client){
+void reservation_creator(hotel::Hotel h1,std::vector<Client> tab_client, std::vector<Reservation> rtab){
     //helper principale permetant de créer, modifier et suprimer lesz réservations 
     //contenues dans un tableau (cette fonction utilise d'autre sous-fonctions)
         Date d(1,1,2023); 
         Reservation rm("0",d,300, h1.idhotel(), 0, "0", 0);
-        std::vector<Reservation> rtab;
         rtab.push_back(rm);
 	std::string encore_reserve = "yes";
 	Date datedef;
