@@ -12,23 +12,23 @@ int main(int argc, char const *argv[]) {
 	Date test2 = test+a;
 	//std::cout<<test2<<std::endl;
 
-	//création d'un hotel
+	//création d'un hotel.............................................................................
 	hotel::Hotel h1("45","bg","paris");
-	h1.cch(5,"double",125,1);
-	h1.cch(2,"suite",210,6);
-	h1.cch(3,"single",100,8);
-	h1.cch(1,"maintenance",0,0);
+	h1.chambre_creator(5,"double",125,1);
+	h1.chambre_creator(2,"suite",210,6);
+	h1.chambre_creator(3,"single",100,8);
+	h1.chambre_creator(1,"maintenance",0,0);
 	//std::cout<< h1.tostring() <<std::endl;
     
 	
-	//création d'un tableau de clients
+	//création d'un tableau de clients................................................................
 	std::vector<Client> tab_client;
         //cl.push_back(Client ("1","semoule","bernard"));
 	//cl.push_back(Client ("2","potiron","jacque"));
 	//cl.push_back(Client ("3","couscous","eric"));
 	//cl.push_back(Client ("4","casoulet","patrique"));
         
-	//création d'un tableau de réservation et de ces réservations
+	//création d'un tableau de réservation et de ces réservations.....................................
 	
 	//Date d1(1,1,2023);
         //Reservation r1(d1,5,h1.idhotel(),0,"1",625);
