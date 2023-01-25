@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 
+#ifndef CHAMBRE_H
+#define CHAMBRE_H
+
 namespace hotel{
     class Chambre{
     private:
@@ -20,3 +23,5 @@ namespace hotel{
     
     std::ostream& operator<<(std::ostream& os,const hotel::Chambre& chambre);
 }
+
+#endif // CHAMBRE_H
