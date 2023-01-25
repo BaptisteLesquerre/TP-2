@@ -23,7 +23,7 @@ namespace hotel{
                 void update_nom(std::string nom);
                 void update_ville(std::string ville);
                 std::string tostring() const;
-                void cch(int nb,std::string b,int prix,int et);
+                void chambre_creator(int nb,std::string b,int prix,int et);
         };
         std::ostream& operator<<(std::ostream& os,const Hotel& hotel);
        
