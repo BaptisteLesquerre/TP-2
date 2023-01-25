@@ -37,18 +37,21 @@ public:
     
 };
 
+//helper pour afficher des réservations....................................................................................
 bool display_reservation_clientid(std::vector<Reservation> rtab, std::string client);
 void display_reservation_client(std::string a, std::vector<Reservation> rtab );
-void display_reservation(std::string a, std::vector<Reservation> rtab );
+void display_reservation(std::vector<Reservation> rtab);
 void display(std::vector<Reservation> reservationtab);
 std::ostream& operator<<(std::ostream& os,const Reservation& reservation);
 
+//helper pour enregistrer/crée des réservations............................................................................
 void reservation_creator(hotel::Hotel h1,std::vector<Client> tab_client, std::vector<Reservation> rtab);
 std::string delete_reservation(std::vector<Reservation>& rtab);
 std::string modif_reservation(std::vector<Reservation>& rtab,hotel::Hotel h1);
 void saisi_reservation1(std::vector<Reservation>& reservationtab,Reservation& r,hotel::Hotel h1,std::string idclient);
 void saisi_reservation2(std::vector<Reservation>& reservationtab,Reservation& r,hotel::Hotel h1,std::string idclient);
 
+//autres helpers.............................................................................................................
 int calcul_montant(int idchambre, hotel::Hotel h1, int nbdenuits);
 bool creneau_valide(Reservation r,std::vector<int>& chambre_dispo,std::vector<Reservation>& reservationtab,Date datebegin,int nbdenuits);
 bool search_chambre(int nbdenuits, std::string typechambre, Reservation& r, std::vector<int>& chambre_dispo, hotel::Hotel h1);
