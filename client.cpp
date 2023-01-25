@@ -28,6 +28,7 @@ void Client::update_prenom(std::string prenom){
     _prenom = prenom;
 }
 
+//affichage d'un objet client.........................................................................................
 std::string Client::tostring() const {
     return "idclient : " + _idclient  + " | " + "nom : " + _nom + " | " +"prenom : " + _prenom;
 }
@@ -45,21 +46,24 @@ std::ostream& operator<<(std::ostream& os,const Client& client){
         return os;
     }
     
+//création de clients et affichage......................................................................................
 std::string saisi_client(std::vector<Client>& cl){
     std::string nom_client;
     bool exist = false;
     std::cout <<"Saisisez le nom d'un client"<<std::endl;
-	std::cin >> nom_client;
+    std::cin >> nom_client;
 	
+    //affichage du client s'il existe
     for(int i=0; i< cl.size(); i += 1){
 		if (cl.at(i).nom() == nom_client){
-            exist = true;
+                        exist = true;
 			std::cout << cl.at(i) << std::endl;
-            return cl.at(i).idclient();
+                        return cl.at(i).idclient();
 		}		
-	} 
-
-	if (exist == false){
+    } 
+    
+    //si le client n'existe pas création d'un client et affichage
+    if (exist == false){
         std::cout<< "client non dans la liste"<<std::endl;
         std::cout<< "ajout du client"<<std::endl;
 
@@ -74,6 +78,6 @@ std::string saisi_client(std::vector<Client>& cl){
         std::cout<<cl.at(cl.size()-1)<<std::endl;
 
         return cl.at(cl.size()-1).idclient();
-	}
+    }
 	
 }
