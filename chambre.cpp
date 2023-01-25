@@ -21,6 +21,7 @@ int hotel::Chambre::GetPrice(){
     return _price;
 }    
 
+//afficher les chambres...............................................................................................
 std::string hotel::Chambre::tostring() const {
    return "numero : " + std::to_string(_numero) + "\n"
    "type : " + _type + "\n"
