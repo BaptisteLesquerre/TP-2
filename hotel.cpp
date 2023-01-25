@@ -33,12 +33,13 @@ namespace hotel {
     void hotel::Hotel::update_ville(std::string ville){
         _ville = ville;
     }
-
+    
+    //affichage d'un objet Hotel...............................................................................
     std::string hotel::Hotel::tostring() const {
-    std::string tc ="|";
-    for (int i = 0; i < _tabchambre.size(); i++){
-        tc=tc + _tabchambre[i].tostring() + "|";
-    }
+        std::string tc ="|";
+        for (int i = 0; i < _tabchambre.size(); i++){
+              tc=tc + _tabchambre[i].tostring() + "|";
+        }
     return "idhotel : " + _idhotel + "\n"
     "nom : " + _nom + "\n"
     "ville : " + _ville + "\n"
@@ -49,7 +50,8 @@ namespace hotel {
         os << hotel.tostring() <<std::endl;
         return os;
     }
-
+    
+    //création d'un certains nombre d'un certain type de chambre (+prix).........................................
     void hotel::Hotel::chambre_creator(int nb,std::string b,int prix,int et){
         for (int i = 0; i < nb; i++){
             int room = i + et;
