@@ -103,8 +103,11 @@ void display(std::vector<Reservation> rtab ){
 	std::cout<<" "<<std::endl;
 }
 
-void display_reservation(std::string a, std::vector<Reservation> rtab ){
+void display_reservation(std::vector<Reservation> rtab ){
     //affiche une réservation selon son identifiant donné en paramètre 
+    std::string a;
+    std::cout<<"Donnez le l'identifiant de la réservation"<<std::endl;
+    std::cin>>a;
     for( int i=0; i<rtab.size(); i=i+1){
         if (a==rtab.at(i).getid_reservation()){
             std::cout<< rtab.at(i).tostring() <<std::endl;
