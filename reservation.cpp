@@ -81,9 +81,15 @@ void Reservation::setIdClient(std::string id_client)
     _id_client = id_client;
 }
 
-//helper pour afficher de différentes manières les réservations
+//helper pour afficher de différentes manières les réservations.....................................................................................
 std::string Reservation::tostring() const {
     return _id_reservation +")"+"date première nuit : " + std::to_string(_nuit_debut.day()) + "/" + std::to_string(_nuit_debut.month()) + "/" + std::to_string(_nuit_debut.year())  + " | " + "nombre de nuits : " + std::to_string(_nb_nuits) + " | " +"id hotel : " + _id_hotel + " | " +"id client : " + _id_client + " | " +"numéro de chambre : " + std::to_string(_numero_chambre) + " | " +"montant : " + std::to_string(_montant);
+}
+
+
+std::ostream& operator<<(std::ostream& os,const Reservation& reservation){
+        os << reservation.tostring() <<std::endl;
+        return os;
 }
 
 void display(std::vector<Reservation> rtab ){
@@ -96,11 +102,6 @@ void display(std::vector<Reservation> rtab ){
     std::cout<< c<<std::endl;
 	std::cout<<" "<<std::endl;
 }
-
-std::ostream& operator<<(std::ostream& os,const Reservation& reservation){
-        os << reservation.tostring() <<std::endl;
-        return os;
-    }
 
 void display_reservation(std::string a, std::vector<Reservation> rtab ){
     //affiche une réservation selon son identifiant donné en paramètre 
@@ -140,7 +141,7 @@ void display_reservation_client( std::vector<Reservation> rtab, std::vector<Clie
     }
 }
 
-//helper pour saisir et modifier des réservations
+//helper pour saisir et modifier des réservations..................................................................................................
 int calcul_montant(int idchambre, hotel::Hotel h1, int nbdenuits){
     for(int i=0; i<h1.tabchambre().size(); i= i+1){
         if (idchambre==h1.tabchambre().at(i).GetNumero()){
@@ -204,13 +205,13 @@ void chambre_libre(std::vector<int>& chambre_dispo,std::vector<Reservation>& rta
 
 void saisi_reservation1(std::vector<Reservation>& rtab,Reservation& r ,hotel::Hotel h1,std::string idclient){
     //permet en itéragissant avec l'utilisateur de créer une réservation
+    std::vector<int> chambre_dispo;
     bool datevalide = false;
     int nbdenuits;
     int jour;
     int moi;
     int année;
-    std::vector<int> chambre_dispo;
-
+    
     while(datevalide == false){
         datevalide = true;
         std::cout<<"saisissez le nombre de nuit "<<std::endl;
