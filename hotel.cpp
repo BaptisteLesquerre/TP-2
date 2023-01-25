@@ -50,7 +50,7 @@ namespace hotel {
         return os;
     }
 
-    void hotel::Hotel::cch(int nb,std::string b,int prix,int et){
+    void hotel::Hotel::chambre_creator(int nb,std::string b,int prix,int et){
         for (int i = 0; i < nb; i++){
             int room = i + et;
             _tabchambre.push_back(Chambre(room, b, prix));
