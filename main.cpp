@@ -1,5 +1,5 @@
 #include <iostream>
-//#include "date.h"
+#include "date.h"
 #include "hotel.h" 
 #include "client.h"
 #include "reservation.h"
