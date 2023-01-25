@@ -42,4 +42,7 @@ int main(int argc, char const *argv[]) {
         rtab.push_back(rm);
 	reservation_creator(h1,tab_client, rtab);
 	
+	display_reservation_client( rtab, tab_client);
+	display_reservation("1",rtab ) //saisire l'identifiant de la réservation choisi.
+	
 }
