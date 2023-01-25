@@ -6,7 +6,8 @@
 #include <algorithm>
 
 int main(int argc, char const *argv[]) {
-    Date test(14,9,2023);
+	
+        Date test(14,9,2023);
 	int a = 4;
 	Date test2 = test+a;
 	//std::cout<<test2<<std::endl;
@@ -31,18 +32,18 @@ int main(int argc, char const *argv[]) {
 	
 	//Date d1(1,1,2023);
         //Reservation r1(d1,5,h1.idhotel(),0,"1",625);
+	//reservationtab.push_back(r1);
 	//Date d2(5,5,2023);
         //Reservation r2(d2,5,h1.idhotel(),5,"2",625);
-    
-	//reservationtab.push_back(r1);
-	//reservationtab.push_back(r2);
+    	//reservationtab.push_back(r2);
+	
         std::vector<Reservation> rtab;
         Date d(1,1,2023); 
-        Reservation rm("0",d,300, h1.idhotel(), 0, "0", 0);
+        Reservation rm("0",d,300, h1.idhotel(), 0, "0", 0);  //reservation 0 (initialise rtab)
         rtab.push_back(rm);
 	reservation_creator(h1,tab_client, rtab);
 	
 	display_reservation_client( rtab, tab_client);
-	display_reservation("1",rtab ) //saisire l'identifiant de la réservation choisi.
+	display_reservation(rtab);
 	
 }
