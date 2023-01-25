@@ -4,6 +4,8 @@
 #include<iostream>
 #include<string>
 
+#ifndef RESERVATION_H
+#define RESERVATION_H
 
 class Reservation
 {
@@ -57,3 +59,4 @@ bool creneau_valide(Reservation r,std::vector<int>& chambre_dispo,std::vector<Re
 bool search_chambre(int nbdenuits, std::string typechambre, Reservation& r, std::vector<int>& chambre_dispo, hotel::Hotel h1);
 void chambre_libre(std::vector<int>& chambre_dispo,std::vector<Reservation>& rtab,hotel::Hotel h1);
 
+#endif // RESERVATION_H
